@@ -1,0 +1,159 @@
+\ProvidesPackage{hcmut-thesis}
+
+\RequirePackage[utf8]{vntex,inputenc}
+\RequirePackage[english]{babel}
+\RequirePackage{geometry,graphicx,hyperref,indentfirst,setspace}
+\RequirePackage{anyfontsize,mathptmx}
+\RequirePackage{tikz}
+
+\usetikzlibrary{calc}
+
+% Sub-preambles
+% https://tex.stackexchange.com/a/395416
+
+\newcommand{\Month}{
+  \ifcase \the\month
+  \or January
+  \or February
+  \or March
+  \or April
+  \or May
+  \or June
+  \or July
+  \or August
+  \or September
+  \or October
+  \or November
+  \or December
+  \fi
+}
+
+\newcommand{\@deptname}{Faculty of Computer Science and Engineering}
+\newcommand{\odeptname}[1]{\renewcommand{\@deptname}{#1}}
+
+\newcommand{\@reporttype}{Graduation Thesis}
+\newcommand{\oreporttype}[1]{\renewcommand{\@reporttype}{#1}}
+
+\newcommand{\@stumajor}{Computer Science}
+\newcommand{\ostumajor}[1]{\renewcommand{\@stumajor}{#1}}
+
+\renewcommand{\@title}{Report title}
+\newcommand{\otitle}[1]{\renewcommand{\@title}{#1}}
+
+\newcommand{\@defcouncil}{Council}
+\newcommand{\odefcouncil}[1]{\renewcommand{\@defcouncil}{#1}}
+
+\newcommand{\@supervisor}{Supervisor}
+\newcommand{\osupervisor}[1]{\renewcommand{\@supervisor}{#1}}
+
+\newcommand{\@reviewer}{Reviewer}
+\newcommand{\oreviewer}[1]{\renewcommand{\@reviewer}{#1}}
+
+\newcommand{\@stuname}{STUDENT 1: Name (ID)\\STUDENT 2: Name (ID)}
+\newcommand{\ostuname}[1]{\renewcommand{\@stuname}{#1}}
+
+\newcommand{\@reportplace}{Ho Chi Minh City}
+\newcommand{\oreportplace}[1]{\renewcommand{\@reportplace}{#1}}
+
+\newcommand{\@reporttime}{\Month \the\year}
+\newcommand{\oreporttime}[1]{\renewcommand{\@reporttime}{#1}}
+
+\def\thesislayout{
+  \geometry{
+    a4paper,
+    left=3cm,
+    right=2cm,
+    top=2cm,
+    bottom=2cm
+  }
+
+  \renewcommand{\large}{\fontsize{15}{15}\selectfont}
+  \renewcommand{\Large}{\fontsize{20}{20}\selectfont}
+
+  \onehalfspacing
+
+  % Allow page breaks inside align* environment
+  % \allowdisplaybreaks{}
+
+  % Makes a lot of things blue, avoid at all costs
+  % \everymath{\color{blue}}
+
+  \hypersetup{
+    colorlinks=true,
+    urlcolor=blue,
+    linkcolor=black,
+    citecolor=red
+  }
+
+  % \renewcommand\lstlistingname{Algorithm}
+  % \renewcommand\lstlistlistingname{Algorithms}
+}
+
+\def\coverpage{
+  \pagestyle{empty}
+  % \setlength{\oddsidemargin}{0cm}
+  % \addtolength{\voffset}{-2.5cm}
+  % \addtolength{\textwidth}{-2cm}
+
+  \begin{tikzpicture}[remember picture, overlay]
+    \draw[line width=3pt]
+    ($(current page.north west) + (3.0cm,-2.0cm)$)
+    rectangle
+    ($(current page.south east) + (-2.0cm,2.0cm)$);
+    \draw[line width=1pt]
+    ($(current page.north west) + (2.9cm,-1.9cm)$)
+    rectangle
+    ($(current page.south east) + (-1.9cm,1.9cm)$);
+  \end{tikzpicture}
+
+  \begin{center}
+    \large \bfseries
+    VIET NAM NATIONAL UNIVERSITY HO CHI MINH CITY
+
+    HO CHI MINH CITY UNIVERSITY OF TECHNOLOGY
+
+    \MakeUppercase{\@deptname}
+    \\[5mm]
+    \includegraphics[scale=0.4]{assets/hcmut.png}
+    \\[1cm]
+    \MakeUppercase{\@reporttype}
+    \\[2cm]
+    {\Large \MakeUppercase{\parbox[c]{14cm}{\centering \@title}}}
+    \\[5mm]
+    {\mdseries Major: \@stumajor}
+  \end{center}
+
+  \vspace{2cm}
+  {
+    \large \bfseries
+    \hspace{4cm} \parbox[t]{12cm}{
+      THESIS COMMITTEE: \@defcouncil
+
+      SUPERVISOR(s): \parbox[t]{8cm}{\@supervisor}
+
+      REVIEWER: \@reviewer
+
+      \hspace*{3cm} ---o0o---
+
+      \@stuname
+    }
+  }
+
+  \vspace{2cm}
+  \begin{center}
+    \large
+    \MakeUppercase{\@reportplace, \@reporttime}
+  \end{center}
+}
+
+\providecommand{\phantomsection}{}
+\newenvironment{preface}[1]{
+  \vspace*{\stretch{2}}
+  {\noindent \bfseries \Huge #1}
+  \begin{center}
+    \phantomsection
+    \addcontentsline{toc}{chapter}{#1}
+    \thispagestyle{plain}
+  \end{center}%
+}
+{\vspace*{\stretch{5}}}
