@@ -70,7 +70,7 @@
   \renewcommand{\large}{\fontsize{15}{15}\selectfont}
   \renewcommand{\Large}{\fontsize{20}{20}\selectfont}
 
-  \onehalfspacing
+  \onehalfspacing%
 
   % Allow page breaks inside align* environment
   % \allowdisplaybreaks{}
@@ -84,9 +84,6 @@
     linkcolor=black,
     citecolor=red
   }
-
-  % \renewcommand\lstlistingname{Algorithm}
-  % \renewcommand\lstlistlistingname{Algorithms}
 }
 
 \def\coverpage{
@@ -95,15 +92,17 @@
   % \addtolength{\voffset}{-2.5cm}
   % \addtolength{\textwidth}{-2cm}
 
-  \begin{tikzpicture}[remember picture, overlay]
-    \draw[line width=3pt]
-    ($(current page.north west) + (3.0cm,-2.0cm)$)
-    rectangle
-    ($(current page.south east) + (-2.0cm,2.0cm)$);
-    \draw[line width=1pt]
-    ($(current page.north west) + (2.9cm,-1.9cm)$)
-    rectangle
-    ($(current page.south east) + (-1.9cm,1.9cm)$);
+  \begin{tikzpicture}[remember picture,overlay]
+    \draw[line width=3pt](
+      $(current page.north west) + (3.0cm,-2.0cm)$
+    ) rectangle (
+      $(current page.south east) + (-2.0cm,2.0cm)$
+    );
+    \draw[line width=1pt](
+      $(current page.north west) + (2.9cm,-1.9cm)$
+    ) rectangle (
+      $(current page.south east) + (-1.9cm,1.9cm)$
+    );
   \end{tikzpicture}
 
   \begin{center}
@@ -153,9 +152,9 @@
   \vspace*{\stretch{2}}
   {\noindent \bfseries \Huge #1}
   \begin{center}
-    \phantomsection
-    \addcontentsline{toc}{chapter}{#1}
     \thispagestyle{plain}
-  \end{center}%
+    \phantomsection\addcontentsline{toc}{chapter}{#1}
+  \end{center}
+}{
+  \vspace*{\stretch{5}}
 }
-{\vspace*{\stretch{5}}}
