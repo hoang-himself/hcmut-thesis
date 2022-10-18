@@ -171,6 +171,10 @@ _minted*
 *.nlo
 *.nls
 
+# symbols
+*.suc
+*.syc
+
 # pax
 *.pax
 

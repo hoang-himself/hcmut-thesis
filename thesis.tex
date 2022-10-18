@@ -2,6 +2,10 @@
 
 \usepackage{hcmut-thesis}
 
+% Remember to change `draft' to `final' on submission
+\usepackage[draft,pageno]{listofsymbols}
+\usepackage{algorithm2e}
+
 \newcommand*\mean[1]{\bar{#1}}
 
 \oreporttype{Report type h}
@@ -23,10 +27,20 @@
 \include{chapters/front/abstract.tex}
 
 \tableofcontents
-% \listofsymbols
-% \listoftables
-% \listoffigures
-% \listofalgorithms
+
+\clearpage
+
+\phantomsection\addcontentsline{toc}{chapter}{List of Symbols}
+\listofsymbols%
+
+\phantomsection\addcontentsline{toc}{chapter}{\listtablename}
+\listoftables
+
+\phantomsection\addcontentsline{toc}{chapter}{\listfigurename}
+\listoffigures
+
+\phantomsection\addcontentsline{toc}{chapter}{List of Algorithms}
+\listofalgorithms%
 
 \mainmatter%
 
