@@ -6,9 +6,13 @@
 % https://tex.stackexchange.com/a/395416
 
 % Remember to change 'draft' to 'final' on submission
-\usepackage[draft,pageno]{listofsymbols}
-\usepackage{algorithm2e}
+% \usepackage[draft,pageno]{listofsymbols}
+% \usepackage{algorithm2e}
 
+% For demonstration purposes, remove in production
+\usepackage{blindtext}
+
+% Configurations
 \oreporttype{Report type h}
 \title{Report title h}
 \odefcouncil{Council h}
@@ -18,7 +22,6 @@
 \thesislayout%
 
 % Custom commands
-% Remove if unneeded
 \newcommand*\mean[1]{\bar{#1}}
 
 \begin{document}
@@ -35,8 +38,8 @@
 
 \clearpage
 
-\phantomsection\addcontentsline{toc}{chapter}{List of Symbols}
-\listofsymbols%
+% \phantomsection\addcontentsline{toc}{chapter}{List of Symbols}
+% \listofsymbols%
 
 \phantomsection\addcontentsline{toc}{chapter}{\listtablename}
 \listoftables
@@ -44,12 +47,15 @@
 \phantomsection\addcontentsline{toc}{chapter}{\listfigurename}
 \listoffigures
 
-\phantomsection\addcontentsline{toc}{chapter}{List of Algorithms}
-\listofalgorithms%
+% \phantomsection\addcontentsline{toc}{chapter}{List of Algorithms}
+% \listofalgorithms%
 
 \mainmatter%
 
 \include{chapters/main/introduction.tex}
+
+% For demonstration purposes, remove in production
+\Blinddocument%
 
 \backmatter%
 
