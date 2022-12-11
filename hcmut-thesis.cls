@@ -1,12 +1,20 @@
-\ProvidesPackage{hcmut-thesis}
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesClass{hcmut-thesis}
+
+\DeclareOption*{\PassOptionsToClass{\CurrentOption}{memoir}}
+\ProcessOptions\relax
+\LoadClass[12pt,a4paper]{memoir}
 
 \RequirePackage[utf8]{vntex,inputenc}
+\RequirePackage{anyfontsize,mathptmx}
+\RequirePackage[T5]{fontenc}
 
 \RequirePackage{geometry,graphicx,indentfirst,setspace}
-\RequirePackage{anyfontsize,mathptmx}
 \RequirePackage{tikz}
 
 \RequirePackage{fancyhdr,hyperref}
+\RequirePackage[super,square,sort]{natbib}
+\RequirePackage[nameinlink]{cleveref} % use \Cref{} instead of \ref{}
 
 % Change to [english,vietnamese] to use Vietnamese labels
 \RequirePackage[english]{babel}
@@ -53,8 +61,8 @@
 \newcommand{\@supervisor}{Supervisor}
 \newcommand{\osupervisor}[1]{\renewcommand{\@supervisor}{#1}}
 
-\newcommand{\@reviewer}{Reviewer}
-\newcommand{\oreviewer}[1]{\renewcommand{\@reviewer}{#1}}
+\newcommand{\@secretary}{Secretary}
+\newcommand{\osecretary}[1]{\renewcommand{\@secretary}{#1}}
 
 \newcommand{\@stuname}{STUDENT 1: Name (ID)\\STUDENT 2: Name (ID)}
 \newcommand{\ostuname}[1]{\renewcommand{\@stuname}{#1}}
@@ -78,7 +86,8 @@
   \renewcommand{\large}{\fontsize{15}{15}\selectfont}
   \renewcommand{\Large}{\fontsize{20}{20}\selectfont}
 
-  \onehalfspacing%
+  \OnehalfSpacing%
+  \raggedbottom
 
   % Allow page breaks inside align* environment
   % \allowdisplaybreaks{}
@@ -86,22 +95,24 @@
   % Makes a lot of things blue, avoid at all costs
   % \everymath{\color{blue}}
 
+  \AtBeginDocument{\renewcommand*\bibname{References}}
+
   \hypersetup{
     colorlinks=true,
-    urlcolor=blue,
     linkcolor=black,
-    citecolor=red
+    citecolor=red,
+    urlcolor=blue
   }
 
   \pagestyle{fancy}
+
   \renewcommand{\headrulewidth}{0.3pt}
-  \renewcommand{\footrulewidth}{0.3pt}
-
   \fancyhead{}
-  \fancyhead[L]{\bfseries \nouppercase{\rightmark}}
-  \fancyhead[R]{\thepage}
+  \fancyhead[EL,OR]{\bfseries \nouppercase{\rightmark}}
 
-  \fancyfoot{}
+  \renewcommand{\footrulewidth}{0pt}
+  \fancyfoot{}{}
+  \fancyfoot[C]{\thepage}
 }
 
 \def\coverpage{
@@ -112,14 +123,14 @@
 
   \begin{tikzpicture}[remember picture,overlay]
     \draw[line width=3pt](
-      $(current page.north west) + (3.0cm,-2.0cm)$
+    $(current page.north west) + (3.0cm,-2.0cm)$
     ) rectangle (
-      $(current page.south east) + (-2.0cm,2.0cm)$
+    $(current page.south east) + (-2.0cm,2.0cm)$
     );
     \draw[line width=1pt](
-      $(current page.north west) + (2.9cm,-1.9cm)$
+    $(current page.north west) + (2.9cm,-1.9cm)$
     ) rectangle (
-      $(current page.south east) + (-1.9cm,1.9cm)$
+    $(current page.south east) + (-1.9cm,1.9cm)$
     );
   \end{tikzpicture}
 
@@ -132,11 +143,11 @@
 
     \MakeUppercase{\@deptname}
     \\[2\baselineskip]
-    \includegraphics[width=0.4\textwidth]{graphics/hcmut.png}
+    \includegraphics[scale=0.6]{graphics/hcmut.png}
     \\[2\baselineskip]
     \MakeUppercase{\@reporttype}
     \\[3\baselineskip]
-    {\Large \MakeUppercase{\parbox[c]{14cm}{\centering \@title}}}
+    {\Large \MakeUppercase{\parbox[c]{0.8\linewidth}{\centering \@title}}}
     \\[1\baselineskip]
     {\mdseries Major: \@stumajor}
   \end{center}
@@ -149,7 +160,7 @@
 
       SUPERVISOR(s): \parbox[t]{7cm}{\@supervisor}
 
-      REVIEWER: \@reviewer
+      SECRETARY: \@secretary
 
       \hspace*{3cm} ---o0o---
 

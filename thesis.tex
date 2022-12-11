@@ -1,69 +1,62 @@
-\documentclass[12pt,a4paper,oneside]{book}
-
-\usepackage{hcmut-thesis}
+\documentclass{hcmut-thesis}
 
 % Sub-preambles
 % https://tex.stackexchange.com/a/395416
 
-% Remember to change 'draft' to 'final' on submission
-% \usepackage[draft,pageno]{listofsymbols}
+\usepackage{appendix}
 % \usepackage{algorithm2e}
+% \usepackage{pdfpages}
+
+% Change 'draft' to 'final' on submission
+% \usepackage[draft,pageno]{listofsymbols}
 
 % For demonstration purposes, remove in production
 \usepackage{blindtext}
 
 % Configurations
 \oreporttype{Report type h}
-\title{Report title h}
-\odefcouncil{Council h}
-\osupervisor{Prof.\ h}
-\oreviewer{Prof.\ h}
-\ostuname{STUDENT h (xxxxxxx)}
+\title{Report title H}
+\odefcouncil{Council H}
+\osupervisor{Prof.\ H}
+\osecretary{Prof.\ H}
+\ostuname{STUDENT:\ H (xxxxxxx)}
 \thesislayout%
 
 % Custom commands
 \newcommand*\mean[1]{\bar{#1}}
 
 \begin{document}
-
 \coverpage%
 
 \frontmatter%
 
-\include{chapters/front/declaration.tex}
-\include{chapters/front/acknowledge.tex}
-\include{chapters/front/abstract.tex}
+% \includepdf[pages=-]{details.pdf}
+\include{chapters/front/1-declaration.tex}
+\include{chapters/front/2-acknowledge.tex}
+\include{chapters/front/3-abstract.tex}
 
 \tableofcontents
-
-\clearpage
-
-% \phantomsection\addcontentsline{toc}{chapter}{List of Symbols}
+% \clearpage
 % \listofsymbols%
-
-% \clearpage
-
-\phantomsection\addcontentsline{toc}{chapter}{\listtablename}
-\listoftables
-
 \clearpage
-
-\phantomsection\addcontentsline{toc}{chapter}{\listfigurename}
+\listoftables
+\clearpage
 \listoffigures
-
 % \clearpage
-
-% \phantomsection\addcontentsline{toc}{chapter}{List of Algorithms}
 % \listofalgorithms%
 
 \mainmatter%
 
-\include{chapters/main/introduction.tex}
-
-% For demonstration purposes, remove in production
-\Blinddocument%
+\include{chapters/main/1-overview.tex}
+\include{chapters/main/2-methodology.tex}
+\include{chapters/main/3-sys-design.tex}
+\include{chapters/main/4-eval.tex}
 
 \backmatter%
+\appendix%
+
+\include{chapters/back/1-design-docs.tex}
+\include{chapters/back/2-test-suite.tex}
 
 \bibliographystyle{plain}
 \bibliography{refs}
