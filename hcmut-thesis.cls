@@ -143,7 +143,7 @@
 
     \MakeUppercase{\@deptname}
     \\[2\baselineskip]
-    \includegraphics[scale=0.6]{graphics/hcmut.png}
+    \includegraphics[scale=0.4]{graphics/hcmut.png}
     \\[2\baselineskip]
     \MakeUppercase{\@reporttype}
     \\[3\baselineskip]
