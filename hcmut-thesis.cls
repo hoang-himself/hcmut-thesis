@@ -95,6 +95,10 @@
   % Makes a lot of things blue, avoid at all costs
   %\everymath{\color{blue}}
 
+  % Set depth of numbering for sections and table of contents
+  %\setsecnumdepth{section}
+  %\setcounter{tocdepth}{1}
+
   \AtBeginDocument{\renewcommand*\bibname{References}}
 
   \hypersetup{
