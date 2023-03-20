@@ -26,6 +26,7 @@
 
 %\graphicspath{{subdir1/}{subdir2/}{subdir3/}...{subdirn/}}
 
+% % Custom commands
 \newcommand{\Month}{
   \ifcase \the\month
   \or January
@@ -73,52 +74,52 @@
 \newcommand{\@reporttime}{\Month \the\year}
 \newcommand{\oreporttime}[1]{\renewcommand{\@reporttime}{#1}}
 
-\def\thesislayout{
-  \geometry{
-    paper=a4paper,
-    left=3cm,
-    right=2cm,
-    vmargin=2cm,
-    includeheadfoot=true,
-    headheight=30pt
-  }
-
-  \renewcommand{\large}{\fontsize{15}{15}\selectfont}
-  \renewcommand{\Large}{\fontsize{20}{20}\selectfont}
-
-  \OnehalfSpacing%
-  \raggedbottom
-
-  % Allow page breaks inside align* environment
-  %\allowdisplaybreaks{}
-
-  % Makes a lot of things blue, avoid at all costs
-  %\everymath{\color{blue}}
-
-  % Set depth of numbering for sections and table of contents
-  %\setsecnumdepth{section}
-  %\setcounter{tocdepth}{1}
-
-  \AtBeginDocument{\renewcommand*\bibname{References}}
-
-  \hypersetup{
-    colorlinks=true,
-    linkcolor=black,
-    citecolor=red,
-    urlcolor=blue
-  }
-
-  \pagestyle{fancy}
-
-  \renewcommand{\headrulewidth}{0.3pt}
-  \fancyhead{}
-  \fancyhead[EL,OR]{\bfseries \nouppercase{\rightmark}}
-
-  \renewcommand{\footrulewidth}{0pt}
-  \fancyfoot{}{}
-  \fancyfoot[C]{\thepage}
+% % Configurations
+\geometry{
+  paper=a4paper,
+  left=3cm,
+  right=2cm,
+  vmargin=2cm,
+  includeheadfoot=true,
+  headheight=30pt
 }
 
+\renewcommand{\large}{\fontsize{15}{15}\selectfont}
+\renewcommand{\Large}{\fontsize{20}{20}\selectfont}
+
+\OnehalfSpacing%
+\raggedbottom
+
+% Allow page breaks inside align* environment
+%\allowdisplaybreaks{}
+
+% Makes a lot of things blue, avoid at all costs
+%\everymath{\color{blue}}
+
+% Set depth of numbering for sections and table of contents
+%\setsecnumdepth{section}
+%\setcounter{tocdepth}{1}
+
+\AtBeginDocument{\renewcommand*\bibname{References}}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=black,
+  citecolor=red,
+  urlcolor=blue
+}
+
+\pagestyle{fancy}
+
+\renewcommand{\headrulewidth}{0.3pt}
+\fancyhead{}
+\fancyhead[EL,OR]{\bfseries \nouppercase{\rightmark}}
+
+\renewcommand{\footrulewidth}{0pt}
+\fancyfoot{}{}
+\fancyfoot[C]{\thepage}
+
+% % Custom pages and sections
 \def\coverpage{
   \thispagestyle{empty}
   %\setlength{\oddsidemargin}{0cm}
