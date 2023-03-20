@@ -24,7 +24,7 @@
 % Draft watermark
 % https://github.com/callegar/LaTeX-draftwatermark
 
-% \graphicspath{{subdir1/}{subdir2/}{subdir3/}...{subdirn/}}
+%\graphicspath{{subdir1/}{subdir2/}{subdir3/}...{subdirn/}}
 
 \newcommand{\Month}{
   \ifcase \the\month
@@ -90,10 +90,10 @@
   \raggedbottom
 
   % Allow page breaks inside align* environment
-  % \allowdisplaybreaks{}
+  %\allowdisplaybreaks{}
 
   % Makes a lot of things blue, avoid at all costs
-  % \everymath{\color{blue}}
+  %\everymath{\color{blue}}
 
   \AtBeginDocument{\renewcommand*\bibname{References}}
 
@@ -117,9 +117,9 @@
 
 \def\coverpage{
   \thispagestyle{empty}
-  % \setlength{\oddsidemargin}{0cm}
-  % \addtolength{\voffset}{-2.5cm}
-  % \addtolength{\textwidth}{-2cm}
+  %\setlength{\oddsidemargin}{0cm}
+  %\addtolength{\voffset}{-2.5cm}
+  %\addtolength{\textwidth}{-2cm}
 
   \begin{tikzpicture}[remember picture,overlay]
     \draw[line width=3pt](
