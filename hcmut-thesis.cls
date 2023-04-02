@@ -98,7 +98,7 @@
 
 % Set depth of numbering for sections and table of contents
 %\setsecnumdepth{section}
-%\setcounter{tocdepth}{1}
+%\settocdepth{section}
 
 \AtBeginDocument{\renewcommand*\bibname{References}}
 
