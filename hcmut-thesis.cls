@@ -11,6 +11,7 @@
 
 \RequirePackage{geometry,graphicx,indentfirst,setspace}
 \RequirePackage{tikz}
+\RequirePackage[center]{caption}
 
 \RequirePackage{fancyhdr,hyperref}
 \RequirePackage[super,square,sort]{natbib}
