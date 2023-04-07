@@ -88,7 +88,7 @@
 \renewcommand{\large}{\fontsize{15}{15}\selectfont}
 \renewcommand{\Large}{\fontsize{20}{20}\selectfont}
 
-\OnehalfSpacing%
+\OnehalfSpacing
 \raggedbottom
 
 % Allow page breaks inside align* environment
@@ -110,22 +110,18 @@
   urlcolor=blue
 }
 
-\pagestyle{fancy}
-
 \renewcommand{\headrulewidth}{0.3pt}
-\fancyhead{}
-\fancyhead[EL,OR]{\bfseries \nouppercase{\rightmark}}
-
 \renewcommand{\footrulewidth}{0pt}
-\fancyfoot{}{}
+
+\pagestyle{fancy}
+\fancyhf{}
+
+\fancyhead[EL,OR]{\bfseries \nouppercase{\rightmark}}
 \fancyfoot[C]{\thepage}
 
 % Custom pages and sections
 \def\coverpage{
   \thispagestyle{empty}
-  %\setlength{\oddsidemargin}{0cm}
-  %\addtolength{\voffset}{-2.5cm}
-  %\addtolength{\textwidth}{-2cm}
 
   \begin{tikzpicture}[remember picture,overlay]
     \draw[line width=3pt](
@@ -158,7 +154,7 @@
     {\mdseries Major: \@stumajor}
   \end{center}
 
-  \vfill%
+  \vfill
   {
     \large \bfseries
     \hfill \parbox[t]{12cm}{
