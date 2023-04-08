@@ -46,34 +46,33 @@
 }
 
 \newcommand{\@deptname}{Faculty of Computer Science and Engineering}
-\newcommand{\odeptname}[1]{\renewcommand{\@deptname}{#1}}
+\newcommand{\deptname}[1]{\renewcommand{\@deptname}{#1}}
 
 \newcommand{\@reporttype}{Graduation Thesis}
-\newcommand{\oreporttype}[1]{\renewcommand{\@reporttype}{#1}}
+\newcommand{\reporttype}[1]{\renewcommand{\@reporttype}{#1}}
 
 \newcommand{\@stumajor}{Computer Science}
-\newcommand{\ostumajor}[1]{\renewcommand{\@stumajor}{#1}}
+\newcommand{\stumajor}[1]{\renewcommand{\@stumajor}{#1}}
 
 \renewcommand{\@title}{Report title}
-\newcommand{\otitle}[1]{\renewcommand{\@title}{#1}}
 
 \newcommand{\@defcouncil}{Council}
-\newcommand{\odefcouncil}[1]{\renewcommand{\@defcouncil}{#1}}
+\newcommand{\defcouncil}[1]{\renewcommand{\@defcouncil}{#1}}
 
 \newcommand{\@supervisor}{Supervisor}
-\newcommand{\osupervisor}[1]{\renewcommand{\@supervisor}{#1}}
+\newcommand{\supervisor}[1]{\renewcommand{\@supervisor}{#1}}
 
 \newcommand{\@secretary}{Secretary}
-\newcommand{\osecretary}[1]{\renewcommand{\@secretary}{#1}}
+\newcommand{\secretary}[1]{\renewcommand{\@secretary}{#1}}
 
 \newcommand{\@stuname}{STUDENT 1: Name (ID)\\STUDENT 2: Name (ID)}
-\newcommand{\ostuname}[1]{\renewcommand{\@stuname}{#1}}
+\newcommand{\stuname}[1]{\renewcommand{\@stuname}{#1}}
 
 \newcommand{\@reportplace}{Ho Chi Minh City}
-\newcommand{\oreportplace}[1]{\renewcommand{\@reportplace}{#1}}
+\newcommand{\reportplace}[1]{\renewcommand{\@reportplace}{#1}}
 
 \newcommand{\@reporttime}{\Month \the\year}
-\newcommand{\oreporttime}[1]{\renewcommand{\@reporttime}{#1}}
+\newcommand{\reporttime}[1]{\renewcommand{\@reporttime}{#1}}
 
 % Configurations
 \geometry{
