@@ -115,12 +115,17 @@
 \pagestyle{fancy}
 \fancyhf{}
 
-\fancyhead[EL,OR]{\bfseries \nouppercase{\rightmark}}
+\if@twoside
+  \fancyhead[EL,OR]{\bfseries\nouppercase\rightmark}
+\else
+  \fancyhead[R]{\bfseries\nouppercase\rightmark}
+\fi
+
 \fancyfoot[C]{\thepage}
 
 % Custom pages and sections
 \def\coverpage{
-  \thispagestyle{empty}
+  \pagestyle{empty}
 
   \begin{tikzpicture}[remember picture,overlay]
     \draw[line width=3pt](
@@ -175,7 +180,8 @@
     \MakeUppercase{\@reportplace, \@reporttime}
   \end{center}
 
-  \clearpage
+  \cleardoublepage
+  \pagestyle{fancy}
 }
 
 \providecommand{\phantomsection}{}
