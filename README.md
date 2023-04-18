@@ -1,5 +1,7 @@
 # Latex HCMUT Thesis Template
 
+[Preview](./thesis.pdf)
+
 ## Report type translation table
 
 | Vietnamese                  | English                      |
