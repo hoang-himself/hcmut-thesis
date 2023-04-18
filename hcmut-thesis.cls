@@ -45,6 +45,9 @@
   \fi
 }
 
+\newcommand{\@upperuniname}{Vietnam National University, Ho Chi Minh City}
+\newcommand{\@uniname}{Ho Chi Minh City University of Technology}
+
 \newcommand{\@deptname}{Faculty of Computer Science and Engineering}
 \newcommand{\deptname}[1]{\renewcommand{\@deptname}{#1}}
 
@@ -141,43 +144,37 @@
   \end{tikzpicture}
 
   \vspace*{-3\baselineskip}
+  \large\bfseries
   \begin{center}
-    \large \bfseries
-    VIET NAM NATIONAL UNIVERSITY HO CHI MINH CITY
+    \MakeUppercase{\@upperuniname}
 
-    HO CHI MINH CITY UNIVERSITY OF TECHNOLOGY
+    \MakeUppercase{\@uniname}
 
     \MakeUppercase{\@deptname}
-    \\[2\baselineskip]
+    \vfill
     \includegraphics[scale=0.4]{graphics/hcmut.png}
-    \\[2\baselineskip]
+    \vfill
     \MakeUppercase{\@reporttype}
-    \\[3\baselineskip]
-    {\Large \MakeUppercase{\parbox[c]{0.8\linewidth}{\centering \@title}}}
-    \\[1\baselineskip]
+    \vfill
+    {\Large\MakeUppercase{\parbox[c]{0.8\linewidth}{\centering\@title}}}
+    \vfill
     {\mdseries Major: \@stumajor}
   \end{center}
-
   \vfill
-  {
-    \large \bfseries
-    \hfill \parbox[t]{12cm}{
-      THESIS COMMITTEE: \@defcouncil
+  \hfill\parbox[t]{12cm}{
+    THESIS COMMITTEE: \@defcouncil
 
-      SUPERVISOR(s): \parbox[t]{7cm}{\@supervisor}
+    SUPERVISOR(s): \parbox[t]{7cm}{\@supervisor}
 
-      SECRETARY: \@secretary
+    SECRETARY: \@secretary
 
-      \hspace*{3cm} ---o0o---
+    \hspace*{3cm} ---o0o---
 
-      \@stuname
-    }
+    \@stuname
   }
-
-  \vspace{2\baselineskip}
+  \vfill
   \begin{center}
-    \large
-    \MakeUppercase{\@reportplace, \@reporttime}
+    \mdseries\MakeUppercase{\@reportplace, \@reporttime}
   \end{center}
 
   \cleardoublepage
