@@ -173,9 +173,11 @@
     \@stuname
   }
   \vfill
+  \mdseries
   \begin{center}
-    \mdseries\MakeUppercase{\@reportplace, \@reporttime}
+    \MakeUppercase{\@reportplace, \@reporttime}
   \end{center}
+  \normalsize
 
   \cleardoublepage
   \pagestyle{fancy}
