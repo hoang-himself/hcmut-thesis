@@ -68,6 +68,9 @@
 \newcommand{\@secretary}{Secretary}
 \newcommand{\secretary}[1]{\renewcommand{\@secretary}{#1}}
 
+\newcommand{\@reviewer}{Reviewer}
+\newcommand{\reviewer}[1]{\renewcommand{\@reviewer}{#1}}
+
 \newcommand{\@stuname}{STUDENT 1: Name (ID)\\STUDENT 2: Name (ID)}
 \newcommand{\stuname}[1]{\renewcommand{\@stuname}{#1}}
 
@@ -166,7 +169,8 @@
 
     SUPERVISOR(s): \parbox[t]{7cm}{\@supervisor}
 
-    SECRETARY: \@secretary
+    %MEMBER SECRETARY: \@secretary
+    REVIEWER: \@reviewer
 
     \hspace*{3cm} ---o0o---
 
