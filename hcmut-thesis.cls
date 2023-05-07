@@ -129,6 +129,7 @@
 % Custom pages and sections
 \def\coverpage{
   \pagestyle{empty}
+  \large\bfseries
 
   \begin{tikzpicture}[remember picture,overlay]
     \draw[line width=3pt](
@@ -144,7 +145,6 @@
   \end{tikzpicture}
 
   \vspace*{-3\baselineskip}
-  \large\bfseries
   \begin{center}
     \MakeUppercase{\@upperuniname}
 
