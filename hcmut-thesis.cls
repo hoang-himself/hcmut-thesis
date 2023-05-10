@@ -63,7 +63,7 @@
 \newcommand{\@reviewer}{Reviewer}
 \newcommand{\reviewer}[1]{\renewcommand{\@reviewer}{#1}}
 
-\newcommand{\@stuname}{STUDENT 1: Name (ID)\\STUDENT 2: Name (ID)}
+\newcommand{\@stuname}{STUDENT:\ H (xxxxxxx)}
 \newcommand{\stuname}[1]{\renewcommand{\@stuname}{#1}}
 
 \newcommand{\@reportplace}{Ho Chi Minh City}
