@@ -15,17 +15,9 @@
 
 \RequirePackage{fancyhdr,hyperref}
 \RequirePackage[super,square,sort]{natbib}
-\RequirePackage[nameinlink]{cleveref} % use \Cref{} instead of \ref{}
 
 % Change to [english,vietnamese] to use Vietnamese labels
 \RequirePackage[english]{babel}
-
-\usetikzlibrary{calc}
-
-% Draft watermark
-% https://github.com/callegar/LaTeX-draftwatermark
-
-%\graphicspath{{subdir1/}{subdir2/}{subdir3/}...{subdirn/}}
 
 % Custom commands
 \newcommand{\Month}{
@@ -81,6 +73,10 @@
 \newcommand{\reporttime}[1]{\renewcommand{\@reporttime}{#1}}
 
 % Configurations
+\usetikzlibrary{calc}
+
+%\graphicspath{{subdir1/}{subdir2/}{subdir3/}...{subdirn/}}
+
 \geometry{
   paper=a4paper,
   left=3cm,
@@ -95,16 +91,6 @@
 
 \OnehalfSpacing
 \raggedbottom
-
-% Allow page breaks inside align* environment
-%\allowdisplaybreaks{}
-
-% Makes a lot of things blue, avoid at all costs
-%\everymath{\color{blue}}
-
-% Set depth of numbering for sections and table of contents
-%\setsecnumdepth{section}
-%\settocdepth{section}
 
 \AtBeginDocument{\renewcommand*\bibname{References}}
 
