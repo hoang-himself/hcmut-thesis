@@ -1,6 +1,6 @@
 # Latex HCMUT Thesis Template
 
-[Preview](./thesis.pdf)
+[Preview](https://www.overleaf.com/latex/templates/hcmut-thesis-template/mzhwtjymgfsq)
 
 ## Report type translation table
 
