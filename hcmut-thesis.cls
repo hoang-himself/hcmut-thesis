@@ -150,7 +150,7 @@
     {\mdseries Major: \@stumajor}
   \end{center}
   \vfill
-  \hfill\parbox[t]{12cm}{
+  \hfill\parbox[t]{13cm}{
     THESIS COMMITTEE: \@defcouncil
 
     SUPERVISOR(s): \parbox[t]{7cm}{\@supervisor}
