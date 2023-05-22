@@ -91,6 +91,7 @@
 
 \OnehalfSpacing
 \raggedbottom
+\renewcommand{\arraystretch}{1.2}
 
 \AtBeginDocument{\renewcommand*\bibname{References}}
 
