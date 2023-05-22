@@ -75,8 +75,6 @@
 % Configurations
 \usetikzlibrary{calc}
 
-%\graphicspath{{subdir1/}{subdir2/}{subdir3/}...{subdirn/}}
-
 \geometry{
   paper=a4paper,
   left=3cm,
@@ -94,13 +92,8 @@
 \renewcommand{\arraystretch}{1.2}
 
 % Set depth of numbering for sections and table of contents
-\setsecnumdepth{section}
-\settocdepth{section}
-
-% Set depth of numbering depth for counters
-\AtBeginDocument{\counterwithin{equation}{section}}
-\AtBeginDocument{\counterwithin{table}{section}}
-\AtBeginDocument{\counterwithin{figure}{section}}
+\setsecnumdepth{subsection}
+\settocdepth{subsection}
 
 % Set numwidths (see Section 9)
 \setlength{\cfttablenumwidth}{3em}

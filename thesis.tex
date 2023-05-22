@@ -1,7 +1,6 @@
 % 'draft' mode can be used to speed up compilation
 \documentclass[final]{hcmut-thesis}
 
-\usepackage{appendix}
 %\usepackage{pdfpages}
 %\usepackage[draft,pageno]{listofsymbols}
 
@@ -61,6 +60,11 @@
 \listoffigures
 
 \mainmatter%
+
+% Set depth of numbering depth for counters
+\counterwithin{equation}{section}
+\counterwithin{table}{section}
+\counterwithin{figure}{section}
 
 \include{chapters/main/overview.tex}
 \include{chapters/main/methodology.tex}
