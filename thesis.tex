@@ -39,6 +39,11 @@
 % Makes a lot of things blue, avoid at all costs
 %\everymath{\color{blue}}
 
+% Set depth of numbering depth for counters
+\AtBeginDocument{\counterwithin{equation}{section}}
+\AtBeginDocument{\counterwithin{table}{section}}
+\AtBeginDocument{\counterwithin{figure}{section}}
+
 % Set numwidths (see Section 9)
 %\setlength{\cfttablenumwidth}{3em}
 %\setlength{\cftfigurenumwidth}{3em}
