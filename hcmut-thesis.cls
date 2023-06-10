@@ -175,8 +175,8 @@
     \MakeUppercase{\@reportplace, \@reporttime}
   \end{center}
   \normalsize
-
   \cleardoublepage
+
   \pagestyle{fancy}
 }
 
@@ -190,4 +190,5 @@
   \end{center}
 }{
   \vspace*{\stretch{5}}
+  \clearpage
 }
