@@ -183,10 +183,10 @@
 \providecommand{\phantomsection}{}
 \newenvironment{preface}[1]{
   \vspace*{\stretch{2}}
-  {\noindent \bfseries \Huge #1}
+  \thispagestyle{plain}
+  {\noindent \bfseries \Huge #1}%
+  \phantomsection\addcontentsline{toc}{chapter}{#1}
   \begin{center}
-    \thispagestyle{plain}
-    \phantomsection\addcontentsline{toc}{chapter}{#1}
   \end{center}
 }{
   \vspace*{\stretch{5}}
