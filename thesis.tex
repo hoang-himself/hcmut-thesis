@@ -1,6 +1,7 @@
 % 'draft' mode can be used to speed up compilation
 \documentclass[final]{hcmut-thesis}
 
+% Include other pdf files, e.g. evaluation sheets
 %\usepackage{pdfpages}
 
 % List of symbols
@@ -50,9 +51,15 @@
 \begin{document}
 \coverpage%
 
+% [openright=true] does not work properly
+%\includepdf[pages=-]{chapters/evaluation-sheet-1.pdf}
+%\cleardoublepage
+%\includepdf[pages=-]{chapters/evaluation-sheet-2.pdf}
+%\cleardoublepage
+%\includepdf[pages=-]{chapters/evaluation-sheet-3.pdf}
+
 \frontmatter%
 
-%\includepdf[pages=-]{details.pdf}
 \include{chapters/front/declaration.tex}
 \include{chapters/front/acknowledge.tex}
 \include{chapters/front/abstract.tex}
