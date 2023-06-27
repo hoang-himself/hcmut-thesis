@@ -175,13 +175,14 @@
     \MakeUppercase{\@reportplace, \@reporttime}
   \end{center}
   \normalsize
-  \cleardoublepage
+  \cleardoublepage%
 
   \pagestyle{fancy}
 }
 
 \providecommand{\phantomsection}{}
 \newenvironment{preface}[1]{
+  \cleardoublepage%
   \vspace*{\stretch{2}}
   \thispagestyle{plain}
   {\noindent \bfseries \Huge #1}%
@@ -190,5 +191,5 @@
   \end{center}
 }{
   \vspace*{\stretch{5}}
-  \clearpage
+  \cleardoublepage%
 }
